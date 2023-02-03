@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewDetails"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+
+    >
+
+
+    <com.skydoves.expandablelayout.ExpandableLayout
+
+        android:id="@+id/expandable1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expandable_duration="300"
+        app:expandable_isExpanded="false"
+        app:expandable_parentLayout="@layout/kutumb_vakyti_parent"
+        app:expandable_secondLayout="@layout/kutumb_vakyti_child"
+        app:expandable_showSpinner="true"
+        app:expandable_spinner="@drawable/ic_arrow_down"
+        app:expandable_spinner_animate="true"
+        app:expandable_spinner_gravity="end"
+        app:expandable_spinner_margin="14dp"
+        app:expandable_spinner_size="32dp" />
+
+    <com.skydoves.expandablelayout.ExpandableLayout
+        android:id="@+id/expandable2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expandable_duration="300"
+        app:expandable_isExpanded="false"
+        app:expandable_parentLayout="@layout/kutumb_sheti_parent"
+        app:expandable_secondLayout="@layout/kutumb_sheti_child"
+        app:expandable_showSpinner="true"
+        app:expandable_spinner="@drawable/ic_arrow_down"
+        app:expandable_spinner_animate="true"
+        app:expandable_spinner_gravity="end"
+        app:expandable_spinner_margin="14dp"
+        app:expandable_spinner_size="32dp"
+       />
+    <com.skydoves.expandablelayout.ExpandableLayout
+        android:id="@+id/expandable3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expandable_duration="300"
+        app:expandable_isExpanded="false"
+        app:expandable_parentLayout="@layout/kutumb_rationcard_parent"
+        app:expandable_secondLayout="@layout/kutumb_rationcard_child"
+        app:expandable_showSpinner="true"
+        app:expandable_spinner="@drawable/ic_arrow_down"
+        app:expandable_spinner_animate="true"
+        app:expandable_spinner_gravity="end"
+        app:expandable_spinner_margin="14dp"
+        app:expandable_spinner_size="32dp"
+        />
+
+    <com.skydoves.expandablelayout.ExpandableLayout
+        android:id="@+id/expandable4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expandable_duration="300"
+        app:expandable_isExpanded="false"
+        app:expandable_parentLayout="@layout/kutumb_documents_parent"
+        app:expandable_secondLayout="@layout/kutumb_documents_child"
+        app:expandable_showSpinner="true"
+        app:expandable_spinner="@drawable/ic_arrow_down"
+        app:expandable_spinner_animate="true"
+        app:expandable_spinner_gravity="end"
+        app:expandable_spinner_margin="14dp"
+        app:expandable_spinner_size="32dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="एकूण उत्पन्न "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/edtFamnt"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:background="@drawable/bg_rounded"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtWordAmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnFupdate"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:weightSum="2">
+
+       <Button
+           android:id="@+id/btnVaccept"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_margin="8dp"
+           android:backgroundTint="@color/green"
+           android:text="Accept" />
+
+       <Button
+           android:id="@+id/btnVreject"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_margin="8dp"
+           android:backgroundTint="@color/red"
+           android:gravity="center"
+           android:text="Reject" />
+
+   </LinearLayout>
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

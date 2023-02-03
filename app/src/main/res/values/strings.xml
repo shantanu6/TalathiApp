@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">TalathiApp</string>
+
+    <string-array name="part_pay">
+        <item>NA</item>
+        <item>YES</item>
+    </string-array>
+
+    <string name="channel_id">Firebase Messages</string>
+
+    <!-- Database Urls-->
+    <string name="db_url">https://coachingmanagement.in/talathi/includes/get_result.php</string>
+    <string name="paytm_checksum_url">https://coachingmanagement.in/talathi/paytm/paytmchecksum/generate_checksum.php</string>
+    <string name="payment_img_url">https://coachingmanagement.in/talathi/pay.png</string>
+    <string name="imp_gr_url">https://stackoverflow.com/</string>
+    <string name="tutorial_url">https://stackoverflow.com/</string>
+
+</resources>

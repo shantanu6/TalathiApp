@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.talathiapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TalathiApp"
+        android:usesCleartextTraffic="true" >
+
+        <service
+            android:name=".ForegroundService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".UpdatePasswordToken"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false"
+            android:label="User Profile"/>
+        <activity
+            android:name=".CustomActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:label="User Registration" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".Fingerprint"
+            android:exported="false" />
+        <activity
+            android:name=".Report"
+            android:exported="false" />
+        <activity
+            android:name=".LoadPdf"
+            android:exported="true" />
+        <activity
+            android:name=".ViewPdf"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewAct"
+            android:exported="false" />
+        <activity
+            android:name=".ViewDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ActivateAccount"
+            android:exported="false" />
+        <activity
+            android:name=".Outbox"
+            android:exported="false" />
+        <activity
+            android:name=".Inbox"
+            android:exported="false" />
+        <activity
+            android:name=".GavDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false"
+            android:label="Dashboard" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FCM -->
+        <service
+            android:name=".FCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/applogo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/green" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/channel_id" />
+
+        <!-- -/FCM -->
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

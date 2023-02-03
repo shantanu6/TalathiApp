@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "409694613524",
+    "project_id": "talathi-1047d",
+    "storage_bucket": "talathi-1047d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409694613524:android:a011883f9e2408c223f701",
+        "android_client_info": {
+          "package_name": "com.example.talathiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409694613524-jq088nsg8l0heveth1t3mrtnu4ud9bsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJPCiUPEjO4jsiBYh99f7-lI5BQe7oz5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409694613524-jq088nsg8l0heveth1t3mrtnu4ud9bsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
